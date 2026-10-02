@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background: #111;
+    color: white;
+    padding: 25px;
+}
+
+.producto {
+    background: white;
+    width: 280px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.producto a {
+    display: block;
+    background: #25D366;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
