@@ -1,36 +1,106 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    margin: 0;
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #061426;
+    color: white;
+}
+
+/* ENCABEZADO */
 header {
     text-align: center;
-    background: #111;
-    color: white;
-    padding: 25px;
+    padding: 35px 20px;
+    background: linear-gradient(135deg, #020b18, #0b2340);
+    border-bottom: 2px solid #d6a85f;
 }
 
+header h1 {
+    margin: 0;
+    color: #f1d39a;
+    font-size: 38px;
+    letter-spacing: 4px;
+}
+
+header p {
+    color: white;
+    margin-top: 10px;
+}
+
+/* CATÁLOGO */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* PRODUCTOS */
 .producto {
-    background: white;
-    width: 280px;
-    margin: 30px auto;
-    padding: 20px;
+    background: linear-gradient(145deg, #0b1d33, #06101e);
+    border: 1px solid #c99b52;
+    border-radius: 16px;
+    padding: 18px;
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 3px 10px #ccc;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
 .producto img {
     width: 100%;
-    border-radius: 10px;
+    height: 280px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: white;
 }
 
+.producto h2 {
+    color: #f1d39a;
+    margin-bottom: 8px;
+}
+
+.producto p {
+    color: #ddd;
+}
+
+.producto h3 {
+    color: #f1d39a;
+    font-size: 24px;
+}
+
+/* BOTÓN WHATSAPP */
 .producto a {
     display: block;
-    background: #25D366;
-    color: white;
-    padding: 12px;
+    background: #c99b52;
+    color: #061426;
+    padding: 13px;
     border-radius: 8px;
     text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.producto a:hover {
+    background: #f1d39a;
+}
+
+/* CELULAR */
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
 }
