@@ -313,6 +313,10 @@ body {
    CONTACTO
    ================================================== */
 
+/* ==================================================
+   CONTACTO DEL ENCABEZADO
+   ================================================== */
+
 .contacto {
 
     position: relative;
@@ -323,8 +327,7 @@ body {
 
     margin: auto;
 
-    padding:
-        18px 20px;
+    padding: 18px 20px;
 
     border-top:
         1px solid rgba(214,168,95,0.5);
@@ -337,14 +340,80 @@ body {
 
     flex-wrap: wrap;
 
-    gap: 50px;
+    gap: 45px;
+}
+
+.contacto a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
 
     color: #f1d39a;
 
+    text-decoration: none;
+
     font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.contacto a:hover {
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
 }
 
 
+/* ÍCONOS */
+
+.icono {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    color: white;
+}
+
+
+/* Instagram */
+
+.instagram {
+
+    background:
+        linear-gradient(
+            135deg,
+            #833ab4,
+            #fd1d1d,
+            #fcb045
+        );
+}
+
+
+/* WhatsApp */
+
+.whatsapp {
+
+    background: #25D366;
+
+    font-size: 19px;
+}
 /* ==================================================
    TÍTULO CATÁLOGO
    ================================================== */
