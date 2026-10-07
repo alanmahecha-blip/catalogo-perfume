@@ -1,246 +1,487 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Parfums MG | Fragancias que dejan huella</title>
 
+    <meta name="description" content="Parfums MG - Descubre fragancias que representan tu esencia, estilo y personalidad.">
+
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         ENCABEZADO
-         ========================= -->
+    <!-- ================= HEADER ================= -->
 
-    <header class="encabezado">
+    <header class="header">
 
-        <div class="rama rama-izquierda">❧</div>
-        <div class="rama rama-derecha">❧</div>
+        <div class="header-contenido">
 
-        <div class="encabezado-contenido">
+            <a href="#" class="logo-area">
+                <img src="logo-parfums.jpg" alt="Parfums MG">
+            </a>
 
-            <div class="logo">
-                <img src="logo-parfums.jpg" alt="Logo Parfums MG">
-            </div>
+            <nav class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
 
-            <div class="informacion">
-
-                <h1>PARFUMS MG</h1>
-
-                <div class="adorno">
-                    ◆ ───────── ◆
-                </div>
-
-                <h2>
-                    Fragancias que dejan huella
-                </h2>
-
-                <p class="descripcion">
-                    Descubre fragancias que representan tu esencia,
-                    tu estilo y tu personalidad.
-                </p>
-
-                <div class="beneficios">
-
-                    <span>✦ Fragancias de alta calidad</span>
-
-                    <span>✦ Compra segura</span>
-
-                    <span>✦ Envíos confiables</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="contacto">
-
-            <span>
-                📷 @parfums._.mg
-            </span>
-
-            <span>
-                💬 3103211876
-            </span>
+            <button class="boton-carrito" onclick="abrirCarrito()">
+                🛒
+                <span id="contador-carrito">0</span>
+            </button>
 
         </div>
 
     </header>
 
 
-    <!-- =========================
-         CATÁLOGO
-         ========================= -->
-
-    <section class="titulo-catalogo">
-
-        <div class="linea"></div>
-
-        <h2>CATÁLOGO</h2>
-
-        <div class="linea"></div>
-
-        <p>
-            Encuentra tu próxima fragancia favorita
-        </p>
-
-    </section>
-
+    <!-- ================= PORTADA ================= -->
 
     <main>
 
+        <section class="hero" id="inicio">
 
-        <!-- =========================
-             ERBA PURA
-             ========================= -->
+            <div class="hero-contenido">
 
-        <div class="producto">
+                <p class="pequeno-titulo">PARFUMS MG</p>
 
-            <div class="foto-producto">
+                <h1>
+                    Fragancias que
+                    <span>dejan huella.</span>
+                </h1>
 
-                <img
-                    src="erbapura.jpg"
-                    alt="Erba Pura">
+                <p class="hero-texto">
+                    Descubre aromas que representan tu esencia,
+                    tu estilo y tu personalidad.
+                </p>
 
-            </div>
-
-            <h2>
-                Erba Pura
-            </h2>
-
-            <p>
-                Perfume 1.1
-            </p>
-
-            <h3>
-                $140.000
-            </h3>
-
-            <a
-                href="https://wa.me/573103211876?text=Hola%20Parfums%20MG,%20estoy%20interesado%20en%20Erba%20Pura"
-                target="_blank">
-
-                💬 Comprar por WhatsApp
-
-            </a>
-
-        </div>
-
-
-        <!-- =========================
-             MANDARIN SKY
-             ========================= -->
-
-        <div class="producto">
-
-            <div class="foto-producto">
-
-                <img
-                    src="mandarin-sky.jpg"
-                    alt="Mandarin Sky">
+                <a href="#catalogo" class="boton-principal">
+                    Ver catálogo
+                </a>
 
             </div>
 
-            <h2>
-                Mandarin Sky
-            </h2>
-
-            <p>
-                Perfume 1.1
-            </p>
-
-            <h3>
-                $100.000
-            </h3>
-
-            <a
-                href="https://wa.me/573103211876?text=Hola%20Parfums%20MG,%20estoy%20interesado%20en%20Mandarin%20Sky"
-                target="_blank">
-
-                💬 Comprar por WhatsApp
-
-            </a>
-
-        </div>
+        </section>
 
 
-        <!-- =========================
-             ODYSSEY GO MANGO
-             ========================= -->
+        <!-- ================= BENEFICIOS ================= -->
 
-        <div class="producto">
+        <section class="beneficios">
 
-            <div class="foto-producto">
+            <div class="beneficio">
+                <span>✦</span>
+                <div>
+                    <strong>Fragancias seleccionadas</strong>
+                    <p>Encuentra tu aroma ideal.</p>
+                </div>
+            </div>
 
-                <img
-                    src="odyssey-go-mango.jpg"
-                    alt="Odyssey Go Mango">
+            <div class="beneficio">
+                <span>✓</span>
+                <div>
+                    <strong>Compra fácil</strong>
+                    <p>Haz tu pedido por WhatsApp.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <span>◆</span>
+                <div>
+                    <strong>Atención personalizada</strong>
+                    <p>Estamos para ayudarte.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATALOGO ================= -->
+
+        <section class="catalogo" id="catalogo">
+
+            <div class="titulo-seccion">
+
+                <p>DESCUBRE NUESTRAS FRAGANCIAS</p>
+
+                <h2>
+                    Nuestro <span>catálogo</span>
+                </h2>
+
+                <div class="linea-dorada"></div>
 
             </div>
 
-            <h2>
-                Odyssey Go Mango
-            </h2>
 
-            <p>
-                Perfume 1.1
+            <!-- BUSCADOR -->
+
+            <div class="herramientas">
+
+                <div class="buscador">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="buscador"
+                        placeholder="Buscar una fragancia..."
+                        oninput="buscarProductos()"
+                    >
+
+                </div>
+
+
+                <div class="filtros">
+
+                    <button class="filtro activo" onclick="filtrarProductos('todos', this)">
+                        Todos
+                    </button>
+
+                    <button class="filtro" onclick="filtrarProductos('hombre', this)">
+                        Hombre
+                    </button>
+
+                    <button class="filtro" onclick="filtrarProductos('unisex', this)">
+                        Unisex
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTOS -->
+
+            <div class="productos" id="productos">
+
+
+                <!-- ERBA PURA -->
+
+                <article
+                    class="producto"
+                    data-nombre="Erba Pura"
+                    data-categoria="unisex"
+                >
+
+                    <div class="producto-imagen">
+
+                        <span class="etiqueta">
+                            DESTACADO
+                        </span>
+
+                        <img
+                            src="erbapura.jpg"
+                            alt="Erba Pura"
+                        >
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <p class="categoria">
+                            UNISEX
+                        </p>
+
+                        <h3>Erba Pura</h3>
+
+                        <p class="descripcion-producto">
+                            Una fragancia intensa, elegante y envolvente
+                            para quienes quieren dejar huella.
+                        </p>
+
+                        <div class="precio">
+                            $140.000
+                        </div>
+
+                        <button
+                            class="boton-comprar"
+                            onclick="agregarCarrito('Erba Pura', 140000)"
+                        >
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MANDARIN SKY -->
+
+                <article
+                    class="producto"
+                    data-nombre="Mandarin Sky"
+                    data-categoria="hombre"
+                >
+
+                    <div class="producto-imagen">
+
+                        <span class="etiqueta">
+                            NUEVO
+                        </span>
+
+                        <img
+                            src="mandarin.jpg"
+                            alt="Mandarin Sky"
+                        >
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <p class="categoria">
+                            HOMBRE
+                        </p>
+
+                        <h3>Mandarin Sky</h3>
+
+                        <p class="descripcion-producto">
+                            Una fragancia fresca, moderna y llamativa
+                            para cualquier ocasión.
+                        </p>
+
+                        <div class="precio">
+                            $100.000
+                        </div>
+
+                        <button
+                            class="boton-comprar"
+                            onclick="agregarCarrito('Mandarin Sky', 100000)"
+                        >
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ODYSSEY GO MANGO -->
+
+                <article
+                    class="producto"
+                    data-nombre="Odyssey Go Mango"
+                    data-categoria="unisex"
+                >
+
+                    <div class="producto-imagen">
+
+                        <span class="etiqueta">
+                            FAVORITO
+                        </span>
+
+                        <img
+                            src="gomango.jpg"
+                            alt="Odyssey Go Mango"
+                        >
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <p class="categoria">
+                            UNISEX
+                        </p>
+
+                        <h3>Odyssey Go Mango</h3>
+
+                        <p class="descripcion-producto">
+                            Dulce, tropical y vibrante. Una opción
+                            perfecta para destacar.
+                        </p>
+
+                        <div class="precio">
+                            $100.000
+                        </div>
+
+                        <button
+                            class="boton-comprar"
+                            onclick="agregarCarrito('Odyssey Go Mango', 100000)"
+                        >
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p id="sin-resultados" class="sin-resultados">
+                No encontramos esa fragancia.
             </p>
 
-            <h3>
-                $100.000
-            </h3>
+        </section>
 
-            <a
-                href="https://wa.me/573103211876?text=Hola%20Parfums%20MG,%20estoy%20interesado%20en%20Odyssey%20Go%20Mango"
-                target="_blank">
 
-                💬 Comprar por WhatsApp
+        <!-- ================= NOSOTROS ================= -->
 
-            </a>
+        <section class="nosotros" id="nosotros">
 
-        </div>
+            <div class="nosotros-contenido">
 
+                <div>
+
+                    <p class="pequeno-titulo">
+                        SOBRE PARFUMS MG
+                    </p>
+
+                    <h2>
+                        Más que una fragancia,
+                        <span>una forma de dejar huella.</span>
+                    </h2>
+
+                    <p>
+                        En Parfums MG buscamos ofrecer fragancias para
+                        diferentes estilos, personalidades y momentos.
+                    </p>
+
+                    <p>
+                        Queremos que encuentres ese aroma que se convierta
+                        en parte de tu identidad.
+                    </p>
+
+                </div>
+
+                <div class="nosotros-decoracion">
+                    <span>MG</span>
+                    <small>PARFUMS</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACTO ================= -->
+
+        <section class="contacto" id="contacto">
+
+            <div class="titulo-seccion">
+
+                <p>¿TIENES ALGUNA PREGUNTA?</p>
+
+                <h2>
+                    Hablemos de <span>tu próxima fragancia</span>
+                </h2>
+
+                <div class="linea-dorada"></div>
+
+            </div>
+
+
+            <div class="contacto-botones">
+
+                <a
+                    href="https://wa.me/573103211876"
+                    target="_blank"
+                    class="contacto-boton whatsapp"
+                >
+                    <strong>WhatsApp</strong>
+                    <span>310 321 1876</span>
+                </a>
+
+                <a
+                    href="https://www.instagram.com/parfums._.mg/"
+                    target="_blank"
+                    class="contacto-boton instagram"
+                >
+                    <strong>Instagram</strong>
+                    <span>@parfums._.mg</span>
+                </a>
+
+            </div>
+
+        </section>
 
     </main>
 
 
-    <!-- =========================
-         PIE DE PÁGINA
-         ========================= -->
+    <!-- ================= CARRITO ================= -->
+
+    <div
+        class="carrito-fondo"
+        id="carrito-fondo"
+        onclick="cerrarCarrito()"
+    ></div>
+
+
+    <aside class="carrito" id="carrito">
+
+        <div class="carrito-header">
+
+            <h2>Tu pedido</h2>
+
+            <button onclick="cerrarCarrito()">×</button>
+
+        </div>
+
+        <div
+            class="carrito-productos"
+            id="carrito-productos"
+        ></div>
+
+        <div class="carrito-total">
+
+            <span>Total</span>
+
+            <strong id="total-carrito">
+                $0
+            </strong>
+
+        </div>
+
+        <button
+            class="boton-whatsapp"
+            onclick="enviarPedido()"
+        >
+            Pedir por WhatsApp
+        </button>
+
+    </aside>
+
+
+    <!-- ================= WHATSAPP FLOTANTE ================= -->
+
+    <a
+        href="https://wa.me/573103211876"
+        target="_blank"
+        class="whatsapp-flotante"
+        aria-label="Contactar por WhatsApp"
+    >
+        <span>✆</span>
+    </a>
+
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
-        <div class="adorno-footer">
-            ◆ ───────── ◆
+        <div class="footer-logo">
+            <strong>PARFUMS MG</strong>
+            <span>Fragancias que dejan huella.</span>
         </div>
 
-        <h2>
-            Gracias por confiar en Parfums MG
-        </h2>
+        <div class="footer-links">
+
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+
+        </div>
 
         <p>
-            Fragancias que dejan huella ♡
+            © 2026 Parfums MG · Todos los derechos reservados.
         </p>
-
-        <div class="contacto-footer">
-
-            <span>
-                Instagram: @parfums._.mg
-            </span>
-
-            <span>
-                WhatsApp: 3103211876
-            </span>
-
-        </div>
 
     </footer>
 
-</body>
 
+    <script src="script.js"></script>
+
+</body>
 </html>
