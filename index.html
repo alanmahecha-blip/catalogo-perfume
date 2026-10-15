@@ -1,597 +1,356 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Parfums MG | Fragancias que dejan huella</title>
-
-    <meta name="description" content="Parfums MG - Descubre fragancias que representan tu esencia, estilo y personalidad.">
-
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>Parfums MG | Catálogo de fragancias</title>
+  <meta name="description" content="Descubre tu próxima fragancia favorita en Parfums MG. Consulta nuestro catálogo y pide por WhatsApp.">
+  <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
-
-    <!-- ================= HEADER ================= -->
-
-    <header class="header">
-
-        <div class="header-contenido">
-
-            <a href="#" class="logo-area">
-                <img src="logomg.jpg" alt="Parfums MG">
-            </a>
-
-            <nav class="menu">
-                <a href="#inicio">Inicio</a>
-                <a href="#catalogo">Catálogo</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-
-            <button class="boton-carrito" onclick="abrirCarrito()">
-                🛒
-                <span id="contador-carrito">0</span>
-            </button>
-
-        </div>
-
-    </header>
-
-
-    <!-- ================= PORTADA ================= -->
-
-    <main>
-
-        <section class="hero" id="inicio">
-
-            <div class="hero-contenido">
-
-                <p class="pequeno-titulo">PARFUMS MG</p>
-
-                <h1>
-                    Fragancias que
-                    <span>dejan huella.</span>
-                </h1>
-
-                <p class="hero-texto">
-                    Descubre aromas que representan tu esencia,
-                    tu estilo y tu personalidad.
-                </p>
-
-                <a href="#catalogo" class="boton-principal">
-                    Ver catálogo
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= BENEFICIOS ================= -->
-
-        <section class="beneficios">
-
-            <div class="beneficio">
-                <span>✦</span>
-                <div>
-                    <strong>Fragancias seleccionadas</strong>
-                    <p>Encuentra tu aroma ideal.</p>
-                </div>
-            </div>
-
-            <div class="beneficio">
-                <span>✓</span>
-                <div>
-                    <strong>Compra fácil</strong>
-                    <p>Haz tu pedido por WhatsApp.</p>
-                </div>
-            </div>
-
-            <div class="beneficio">
-                <span>◆</span>
-                <div>
-                    <strong>Atención personalizada</strong>
-                    <p>Estamos para ayudarte.</p>
-                </div>
-            </div>
-
-        </section>
-
-
-        <!-- ================= CATALOGO ================= -->
-
-        <section class="catalogo" id="catalogo">
-
-            <div class="titulo-seccion">
-
-                <p>DESCUBRE NUESTRAS FRAGANCIAS</p>
-
-                <h2>
-                    Nuestro <span>catálogo</span>
-                </h2>
-
-                <div class="linea-dorada"></div>
-
-            </div>
-
-
-            <!-- BUSCADOR -->
-
-            <div class="herramientas">
-
-                <div class="buscador">
-
-                    <span>⌕</span>
-
-                    <input
-                        type="text"
-                        id="buscador"
-                        placeholder="Buscar una fragancia..."
-                        oninput="buscarProductos()"
-                    >
-
-                </div>
-
-
-                <div class="filtros">
-
-                    <button class="filtro activo" onclick="filtrarProductos('todos', this)">
-                        Todos
-                    </button>
-
-                    <button class="filtro" onclick="filtrarProductos('hombre', this)">
-                        Hombre
-                    </button>
-
-                    <button class="filtro" onclick="filtrarProductos('unisex', this)">
-                        Unisex
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- PRODUCTOS -->
-
-            <div class="productos" id="productos">
-
-
-                <!-- ERBA PURA -->
-
-                <article
-                    class="producto"
-                    data-nombre="Erba Pura"
-                    data-categoria="unisex"
-                >
-
-                    <div class="producto-imagen">
-
-                        <span class="etiqueta">
-                            DESTACADO
-                        </span>
-
-                        <img
-                            src="erbapura.jpg"
-                            alt="Erba Pura"
-                        >
-
-                    </div>
-
-                    <div class="producto-info">
-
-                        <p class="categoria">
-                            UNISEX
-                        </p>
-
-                        <h3>Erba Pura</h3>
-
-                        <p class="descripcion-producto">
-                            Una fragancia intensa, elegante y envolvente
-                            para quienes quieren dejar huella.
-                        </p>
-
-                        <div class="precio">
-                            $140.000
-                        </div>
-
-                        <button
-                            class="boton-comprar"
-                            onclick="agregarCarrito('Erba Pura', 140000)"
-                        >
-                            Agregar al carrito
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- MANDARIN SKY -->
-
-                <article
-                    class="producto"
-                    data-nombre="Mandarin Sky"
-                    data-categoria="hombre"
-                >
-
-                    <div class="producto-imagen">
-
-                        <span class="etiqueta">
-                            NUEVO
-                        </span>
-
-                        <img
-                            src="mandarin.jpg"
-                            alt="Mandarin Sky"
-                        >
-
-                    </div>
-
-                    <div class="producto-info">
-
-                        <p class="categoria">
-                            HOMBRE
-                        </p>
-
-                        <h3>Mandarin Sky</h3>
-
-                        <p class="descripcion-producto">
-                            Una fragancia fresca, moderna y llamativa
-                            para cualquier ocasión.
-                        </p>
-
-                        <div class="precio">
-                            $100.000
-                        </div>
-
-                        <button
-                            class="boton-comprar"
-                            onclick="agregarCarrito('Mandarin Sky', 100000)"
-                        >
-                            Agregar al carrito
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ODYSSEY GO MANGO -->
-
-                <article
-                    class="producto"
-                    data-nombre="Odyssey Go Mango"
-                    data-categoria="unisex"
-                >
-
-                    <div class="producto-imagen">
-
-                        <span class="etiqueta">
-                            FAVORITO
-                        </span>
-
-                        <img
-                            src="gomango.jpg"
-                            alt="Odyssey Go Mango"
-                        >
-
-                    </div>
-
-                    <div class="producto-info">
-
-                        <p class="categoria">
-                            UNISEX
-                        </p>
-
-                        <h3>Odyssey Go Mango</h3>
-
-                        <p class="descripcion-producto">
-                            Dulce, tropical y vibrante. Una opción
-                            perfecta para destacar.
-                        </p>
-
-                        <div class="precio">
-                            $100.000
-                        </div>
-
-                        <button
-                            class="boton-comprar"
-                            onclick="agregarCarrito('Odyssey Go Mango', 100000)"
-                        >
-                            Agregar al carrito
-                        </button>
-
-                    </div>
-
-                </article>
-
-            </div>
-<!-- 212 MEN -->
-<article class="producto" data-nombre="212 Men" data-categoria="hombre">
-    <div class="producto-imagen">
-        <img src="212 hombres.jpg" alt="212 Men">
-    </div>
-    <div class="producto-info">
-        <p class="categoria">HOMBRE</p>
-        <h3>212 Men</h3>
-        <p class="descripcion-producto">Una fragancia para destacar con personalidad.</p>
-        <div class="precio">$80.000</div>
-        <button class="boton-comprar" onclick="agregarCarrito('212 Men', 0)">Agregar al carrito</button>
-    </div>
-</article>
-
-<!-- 212 VIP ROSÉ -->
-<article class="producto" data-nombre="212 VIP Rosé" data-categoria="mujer">
-    <div class="producto-imagen">
-        <img src="212rosa.jpg" alt="212 VIP Rosé">
-    </div>
-    <div class="producto-info">
-        <p class="categoria">MUJER</p>
-        <h3>212 VIP Rosé</h3>
-        <p class="descripcion.-producto">Una fragancia femenina, elegante y sofisticada.</p>
-        <div class="precio">$80.000</div>
-        <button class="boton-comprar" onclick="agregarCarrito('212 VIP Rosé', 0)">Agregar al carrito</button>
-    </div>
-</article>
-
-<!-- PARADISE GARDEN -->
-<article class="producto" data-nombre="Paradise Garden" data-categoria="mujer">
-    <div class="producto-imagen">
-        <img src="paraìsomujer.jpg" alt="Paradise Garden">
-    </div>
-    <div class="producto-info">
-        <p class="categoria">MUJER</p>
-        <h3>Paradise Garden</h3>
-        <p class="descripcion-producto">Una fragancia para disfrutar y dejar huella.</p>
-        <div class="precio">$80.000</div>
-        <button class="boton-comprar" onclick="agregarCarrito('Paradise Garden', 0)">Agregar al carrito</button>
-    </div>
-</article>
-
-<!-- 9 PM POUR FEMME -->
-<article class="producto" data-nombre="9 PM Pour Femme" data-categoria="mujer">
-    <div class="producto-imagen">
-        <img src="9pm-pour-femme.jpg" alt="9 PM Pour Femme">
-    </div>
-    <div class="producto-info">
-        <p class="categoria">MUJER</p>
-        <h3>9 PM Pour Femme</h3>
-        <p class="descripcion-producto">Una opción moderna para complementar tu estilo.</p>
-        <div class="precio">$80.000</div>
-        <button class="boton-comprar" onclick="agregarCarrito('9 PM Pour Femme', 0)">Agregar al carrito</button>
-    </div>
-</article>
-
-<!-- ASAD -->
-<article class="producto" data-nombre="Asad" data-categoria="hombre">
-    <div class="producto-imagen">
-        <img src="asad.jpg" alt="Asad">
-    </div>
-    <div class="producto-info">
-        <p class="categoria">HOMBRE</p>
-        <h3>Asad</h3>
-        <p class="descripcion-producto">Un aroma intenso con una presencia marcada.</p>
-        <div class="precio">$100.000</div>
-        <button class="boton-comprar" onclick="agregarCarrito('Asad', 0)">Agregar al carrito</button>
-    </div>
-</article>
-
-<!-- YARA CANDY -->
-<article class="producto" data-nombre="Yara Candy" data-categoria="mujer">
-    <div class="producto-imagen">
-        <img src="yara-candy.jpg" alt="Yara Candy">
-    </div>
-    <div class="producto-info">
-        <p class="categoria">MUJER</p>
-        <h3>Yara Candy</h3>
-        <p class="descripcion-producto">Una propuesta dulce, alegre y llamativa.</p>
-        <div class="precio">$0</div>
-        <button class="boton-comprar" onclick="agregarCarrito('Yara Candy', 0)">Agregar al carrito</button>
-    </div>
-</article>
-
-<!-- ACQUA DI GIO -->
-<article class="producto" data-nombre="Acqua di Giò" data-categoria="hombre">
-    <div class="producto-imagen">
-        <img src="acqua-di-gio.jpg" alt="Acqua di Giò">
-    </div>
-    <div class="producto-info">
-        <p class="categoria">HOMBRE</p>
-        <h3>Acqua di Giò</h3>
-        <p class="descripcion-producto">Una fragancia fresca, versátil y atemporal.</p>
-        <div class="precio">$0</div>
-        <button class="boton-comprar" onclick="agregarCarrito('Acqua di Giò', 0)">Agregar al carrito</button>
-    </div>
-</article>
-
-<!-- ART OF UNIVERSE -->
-<article class="producto" data-nombre="Art of Universe" data-categoria="unisex">
-    <div class="producto-imagen">
-        <img src="art-of-universe.jpg" alt="Art of Universe">
-    </div>
-    <div class="producto-info">
-        <p class="categoria">UNISEX</p>
-        <h3>Art of Universe</h3>
-        <p class="descripcion-producto">Una fragancia con carácter para expresar tu estilo.</p>
-        <div class="precio">$0</div>
-        <button class="boton-comprar" onclick="agregarCarrito('Art of Universe', 0)">Agregar al carrito</button>
-    </div>
-</article>
-            <p id="sin-resultados" class="sin-resultados">
-                No encontramos esa fragancia.
-            </p>
-
-        </section>
-
-
-        <!-- ================= NOSOTROS ================= -->
-
-        <section class="nosotros" id="nosotros">
-
-            <div class="nosotros-contenido">
-
-                <div>
-
-                    <p class="pequeno-titulo">
-                        SOBRE PARFUMS MG
-                    </p>
-
-                    <h2>
-                        Más que una fragancia,
-                        <span>una forma de dejar huella.</span>
-                    </h2>
-
-                    <p>
-                        En Parfums MG buscamos ofrecer fragancias para
-                        diferentes estilos, personalidades y momentos.
-                    </p>
-
-                    <p>
-                        Queremos que encuentres ese aroma que se convierta
-                        en parte de tu identidad.
-                    </p>
-
-                </div>
-
-                <div class="nosotros-decoracion">
-                    <span>MG</span>
-                    <small>PARFUMS</small>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CONTACTO ================= -->
-
-        <section class="contacto" id="contacto">
-
-            <div class="titulo-seccion">
-
-                <p>¿TIENES ALGUNA PREGUNTA?</p>
-
-                <h2>
-                    Hablemos de <span>tu próxima fragancia</span>
-                </h2>
-
-                <div class="linea-dorada"></div>
-
-            </div>
-
-
-            <div class="contacto-botones">
-
-                <a
-                    href="https://wa.me/573103211876"
-                    target="_blank"
-                    class="contacto-boton whatsapp"
-                >
-                    <strong>WhatsApp</strong>
-                    <span>310 321 1876</span>
-                </a>
-
-                <a
-                    href="https://www.instagram.com/parfums._.mg/"
-                    target="_blank"
-                    class="contacto-boton instagram"
-                >
-                    <strong>Instagram</strong>
-                    <span>@parfums._.mg</span>
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= CARRITO ================= -->
-
-    <div
-        class="carrito-fondo"
-        id="carrito-fondo"
-        onclick="cerrarCarrito()"
-    ></div>
-
-
-    <aside class="carrito" id="carrito">
-
-        <div class="carrito-header">
-
-            <h2>Tu pedido</h2>
-
-            <button onclick="cerrarCarrito()">×</button>
-
-        </div>
-
-        <div
-            class="carrito-productos"
-            id="carrito-productos"
-        ></div>
-
-        <div class="carrito-total">
-
-            <span>Total</span>
-
-            <strong id="total-carrito">
-                $0
-            </strong>
-
-        </div>
-
-        <button
-            class="boton-whatsapp"
-            onclick="enviarPedido()"
-        >
-            Pedir por WhatsApp
-        </button>
-
-    </aside>
-
-
-    <!-- ================= WHATSAPP FLOTANTE ================= -->
-
-    <a
-        href="https://wa.me/573103211876"
-        target="_blank"
-        class="whatsapp-flotante"
-        aria-label="Contactar por WhatsApp"
-    >
-        <span>✆</span>
+  <header class="encabezado">
+    <a href="#inicio" class="marca">
+      <img src="logo-parfums.jpg" alt="Logo Parfums MG"
+           onerror="this.style.display='none'">
+      <span>PARFUMS <strong>MG</strong></span>
     </a>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="footer-logo">
-            <strong>PARFUMS MG</strong>
-            <span>Fragancias que dejan huella.</span>
-        </div>
-
-        <div class="footer-links">
-
-            <a href="#inicio">Inicio</a>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
-
-        </div>
-
+    <nav class="navegacion">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="boton boton-dorado"
+       href="https://wa.me/573103211876"
+       target="_blank" rel="noopener">
+      Consultar
+    </a>
+  </header>
+  <main>
+    <section class="portada" id="inicio">
+      <div class="portada-contenido">
+        <p class="etiqueta">EL ARTE DE DEJAR HUELLA</p>
+        <h1>Una fragancia.<br><span>Tu esencia.</span></h1>
         <p>
-            © 2026 Parfums MG · Todos los derechos reservados.
+          Encuentra aromas que expresan tu personalidad
+          y convierten cada momento en algo especial.
         </p>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
+        <a href="#catalogo" class="boton boton-dorado">
+          Explorar catálogo
+        </a>
+      </div>
+      <div class="portada-decoracion" aria-hidden="true">
+        <span>MG</span>
+        <div class="linea-dorada"></div>
+        <p>FRAGANCIAS QUE DEJAN HUELLA</p>
+      </div>
+    </section>
+    <section class="beneficios">
+      <article>
+        <span>✦</span>
+        <h3>Tu estilo</h3>
+        <p>Fragancias para diferentes gustos y ocasiones.</p>
+      </article>
+      <article>
+        <span>◇</span>
+        <h3>Atención personalizada</h3>
+        <p>Te ayudamos a encontrar un aroma para ti.</p>
+      </article>
+      <article>
+        <span>♡</span>
+        <h3>Pedidos fáciles</h3>
+        <p>Consulta disponibilidad directamente por WhatsApp.</p>
+      </article>
+    </section>
+    <section class="catalogo" id="catalogo">
+      <div class="titulo-seccion">
+        <p class="etiqueta">DESCUBRE TU AROMA</p>
+        <h2>Nuestro <span>catálogo</span></h2>
+        <p>Explora nuestras fragancias y encuentra tu favorita.</p>
+      </div>
+      <div class="controles">
+        <input
+          type="search"
+          id="buscador"
+          placeholder="Buscar una fragancia..."
+          aria-label="Buscar una fragancia">
+        <div class="filtros">
+          <button class="filtro activo" data-filtro="todos">Todos</button>
+          <button class="filtro" data-filtro="hombre">Hombre</button>
+          <button class="filtro" data-filtro="mujer">Mujer</button>
+          <button class="filtro" data-filtro="unisex">Unisex</button>
+        </div>
+      </div>
+      <div class="productos" id="productos">
+        <!-- PRODUCTO 1 -->
+        <article class="producto" data-categoria="unisex">
+          <div class="producto-imagen">
+            <img src="erbapura.jpg" alt="Erba Pura"
+                 loading="lazy" onerror="this.style.display='none'">
+            <span class="producto-etiqueta">Destacado</span>
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Unisex</p>
+            <h3>Erba Pura</h3>
+            <p class="producto-descripcion">Un aroma frutal, dulce y envolvente.</p>
+            <div class="producto-pie">
+              <strong class="precio">$140.000</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('Erba Pura')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+        <!-- PRODUCTO 2 -->
+        <article class="producto" data-categoria="hombre">
+          <div class="producto-imagen">
+            <img src="mandarin-sky.jpg" alt="Mandarin Sky"
+                 loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Hombre</p>
+            <h3>Mandarin Sky</h3>
+            <p class="producto-descripcion">Una fragancia intensa y moderna.</p>
+            <div class="producto-pie">
+              <strong class="precio">$100.000</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('Mandarin Sky')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+        <!-- PRODUCTO 3 -->
+        <article class="producto" data-categoria="unisex">
+          <div class="producto-imagen">
+            <img src="odyssey-go-mango.jpg" alt="Odyssey Go Mango"
+                 loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Unisex</p>
+            <h3>Odyssey Go Mango</h3>
+            <p class="producto-descripcion">Un aroma tropical y vibrante.</p>
+            <div class="producto-pie">
+              <strong class="precio">$100.000</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('Odyssey Go Mango')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+        <!-- PRODUCTO 4 -->
+        <article class="producto" data-categoria="hombre">
+          <div class="producto-imagen">
+            <img src="212 hombres.jpg" alt="212 Men"
+                 loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Hombre</p>
+            <h3>212 Men</h3>
+            <p class="producto-descripcion">Frescura urbana y estilo moderno.</p>
+            <div class="producto-pie">
+              <strong class="precio">80.000</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('212 Men')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+        <!-- PRODUCTO 5 -->
+        <article class="producto" data-categoria="mujer">
+          <div class="producto-imagen">
+            <img src="212rosa.jpg" alt="212 VIP Rosé"
+                 loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Mujer</p>
+            <h3>212 VIP Rosé</h3>
+            <p class="producto-descripcion">Un aroma elegante y sofisticado.</p>
+            <div class="producto-pie">
+              <strong class="precio">80.000</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('212 VIP Rosé')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+        <!-- PRODUCTO 6 -->
+        <article class="producto" data-categoria="mujer">
+          <div class="producto-imagen">
+            <img src="paraisomujer.jpg" alt="Paradise Garden"
+                 loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Mujer</p>
+            <h3>Paradise Garden</h3>
+            <p class="producto-descripcion">Una opción para quienes aman los aromas especiales.</p>
+            <div class="producto-pie">
+              <strong class="precio">80.000</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('Paradise Garden')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+        <!-- PRODUCTO 7 -->
+        <article class="producto" data-categoria="mujer">
+          <div class="producto-imagen">
+            <img src="9pm-pour-femme.jpg" alt="9 PM Pour Femme"
+                 loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Mujer</p>
+            <h3>9 PM Pour Femme</h3>
+            <p class="producto-descripcion">Una fragancia femenina para destacar.</p>
+            <div class="producto-pie">
+              <strong class="precio">80.000</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('9 PM Pour Femme')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+        <!-- PRODUCTO 8 -->
+        <article class="producto" data-categoria="hombre">
+          <div class="producto-imagen">
+            <img src="asad.jpg" alt="Asad"
+                 loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Hombre</p>
+            <h3>Asad</h3>
+            <p class="producto-descripcion">Un aroma intenso y con carácter.</p>
+            <div class="producto-pie">
+              <strong class="precio">100.000</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('Asad')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+        <!-- PRODUCTO 9 -->
+        <article class="producto" data-categoria="mujer">
+          <div class="producto-imagen">
+            <img src="yaracandy.jpg" alt="Yara Candy"
+                 loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Mujer</p>
+            <h3>Yara Candy</h3>
+            <p class="producto-descripcion">Un aroma dulce y divertido.</p>
+            <div class="producto-pie">
+              <strong class="precio">100.000</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('Yara Candy')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+        <!-- PRODUCTO 10 -->
+        <article class="producto" data-categoria="hombre">
+          <div class="producto-imagen">
+            <img src="acquagio.jpg" alt="Acqua di Giò"
+                 loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Hombre</p>
+            <h3>Acqua di Giò</h3>
+            <p class="producto-descripcion">Un perfil fresco, acuático y elegante.</p>
+            <div class="producto-pie">
+              <strong class="precio">Consultar precio</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('Acqua di Giò')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+        <!-- PRODUCTO 11 -->
+        <article class="producto" data-categoria="unisex">
+          <div class="producto-imagen">
+            <img src="art.jpg" alt="Art of Universe"
+                 loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="producto-info">
+            <p class="producto-categoria">Unisex</p>
+            <h3>Art of Universe</h3>
+            <p class="producto-descripcion">Una combinación aromática para descubrir.</p>
+            <div class="producto-pie">
+              <strong class="precio">100.000</strong>
+              <button class="boton-pedir"
+                onclick="pedirProducto('Art of Universe')">Pedir ↗</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p id="sin-resultados" class="sin-resultados" hidden>
+        No encontramos esa fragancia. Prueba con otro nombre.
+      </p>
+    </section>
+    <section class="nosotros" id="nosotros">
+      <div class="nosotros-sello">MG</div>
+      <div>
+        <p class="etiqueta">SOBRE NOSOTROS</p>
+        <h2>Tu aroma también habla de ti.</h2>
+        <p>
+          En Parfums MG queremos ayudarte a descubrir fragancias
+          que conecten con tu estilo y tu personalidad. Explora el
+          catálogo y contáctanos para consultar precios y disponibilidad.
+        </p>
+        <a class="enlace-dorado" href="#contacto">Conócenos por WhatsApp ↗</a>
+      </div>
+    </section>
+    <section class="contacto" id="contacto">
+      <p class="etiqueta">ESTAMOS PARA AYUDARTE</p>
+      <h2>¿Ya encontraste tu fragancia?</h2>
+      <p>Escríbenos para consultar precios, disponibilidad y pedidos.</p>
+      <a class="boton boton-dorado"
+         href="https://wa.me/573103211876?text=Hola%20Parfums%20MG%2C%20quiero%20consultar%20por%20una%20fragancia."
+         target="_blank" rel="noopener">
+        Consultar por WhatsApp
+      </a>
+      <a class="instagram"
+         href="https://www.instagram.com/parfums._.mg/"
+         target="_blank" rel="noopener">
+        Instagram: @parfums._.mg
+      </a>
+    </section>
+  </main>
+  <footer class="pie">
+    <a href="#inicio" class="marca marca-pie">
+      PARFUMS <strong>MG</strong>
+    </a>
+    <p>Fragancias que dejan huella.</p>
+    <p>© 2026 Parfums MG. Todos los derechos reservados.</p>
+  </footer>
+  <a class="whatsapp-flotante"
+     href="https://wa.me/573103211876"
+     target="_blank" rel="noopener"
+     aria-label="Contactar por WhatsApp">WA</a>
+  <script>
+    const buscador = document.getElementById("buscador");
+    const productos = Array.from(document.querySelectorAll(".producto"));
+    const botonesFiltro = document.querySelectorAll(".filtro");
+    const sinResultados = document.getElementById("sin-resultados");
+    let filtroActual = "todos";
+    function actualizarCatalogo() {
+      const busqueda = buscador.value.trim().toLowerCase();
+      let visibles = 0;
+      productos.forEach((producto) => {
+        const nombre = producto.querySelector("h3").textContent.toLowerCase();
+        const categoria = producto.dataset.categoria;
+        const coincideNombre = nombre.includes(busqueda);
+        const coincideCategoria =
+          filtroActual === "todos" || categoria === filtroActual;
+        const mostrar = coincideNombre && coincideCategoria;
+        producto.hidden = !mostrar;
+        if (mostrar) visibles++;
+      });
+      sinResultados.hidden = visibles > 0;
+    }
+    buscador.addEventListener("input", actualizarCatalogo);
+    botonesFiltro.forEach((boton) => {
+      boton.addEventListener("click", () => {
+        botonesFiltro.forEach((b) => b.classList.remove("activo"));
+        boton.classList.add("activo");
+        filtroActual = boton.dataset.filtro;
+        actualizarCatalogo();
+      });
+    });
+    function pedirProducto(nombre) {
+      const mensaje = `Hola Parfums MG, quiero consultar el precio y la disponibilidad de ${nombre}.`;
+      const url = "https://wa.me/573103211876?text=" + encodeURIComponent(mensaje);
+      window.open(url, "_blank", "noopener");
+    }
+  </script>
 </body>
 </html>
