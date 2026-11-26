@@ -997,3 +997,179 @@ footer > p,
         width: auto;
     }
 }
+/* =========================================
+   MEJORA DEL ENCABEZADO - PARFUMS MG
+   ========================================= */
+
+.header,
+.encabezado {
+    width: 100%;
+    background: #0a1023;
+    border-bottom: 2px solid #d4af37;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+}
+
+.header-contenido,
+.encabezado-contenido {
+    max-width: 1350px;
+    min-height: 88px;
+    margin: 0 auto;
+    padding: 12px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 25px;
+}
+
+/* LOGO Y NOMBRE */
+
+.marca {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.marca strong {
+    color: #d4af37;
+}
+
+/* BOTONES DE NAVEGACIÓN */
+
+.navegacion,
+.menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.navegacion a,
+.menu a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #f7f5f1;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+}
+
+.navegacion a:hover,
+.menu a:hover {
+    color: #d4af37;
+    border-color: rgba(212, 175, 55, 0.6);
+    background: rgba(212, 175, 55, 0.08);
+}
+
+/* BOTÓN CONSULTAR */
+
+.encabezado .boton-dorado,
+.encabezado .boton,
+.header .boton-dorado,
+.header .boton {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 0 22px;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    background: #d4af37;
+    color: #101322;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+}
+
+.encabezado .boton-dorado:hover,
+.encabezado .boton:hover,
+.header .boton-dorado:hover,
+.header .boton:hover {
+    background: transparent;
+    color: #d4af37;
+}
+
+/* CARRITO, SI ESTÁ EN EL ENCABEZADO */
+
+.header .boton-carrito,
+.encabezado .boton-carrito {
+    flex-shrink: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .header-contenido,
+    .encabezado-contenido {
+        padding: 12px 18px;
+        gap: 12px;
+    }
+
+    .navegacion,
+    .menu {
+        gap: 3px;
+    }
+
+    .navegacion a,
+    .menu a {
+        padding: 0 11px;
+        font-size: 12px;
+    }
+
+    .marca {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+    .header-contenido,
+    .encabezado-contenido {
+        min-height: auto;
+        padding: 12px 14px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .navegacion,
+    .menu {
+        display: flex;
+        order: 3;
+        flex: 0 0 100%;
+        width: 100%;
+        justify-content: space-between;
+        gap: 4px;
+    }
+
+    .navegacion a,
+    .menu a {
+        flex: 1;
+        min-width: 0;
+        min-height: 38px;
+        padding: 0 4px;
+        font-size: 11px;
+        white-space: normal;
+        text-align: center;
+    }
+}
